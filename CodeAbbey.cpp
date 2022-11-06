@@ -1,6 +1,6 @@
 /*
 	selection of helper functions
-	v0.3
+	v0.5
 */
 
 #include <iostream>
@@ -104,6 +104,12 @@ std::vector<int> stringVectorToInt(std::vector<std::string>& vct) {
 
 std::vector<int> splitToInt(std::string str, const std::string separator) {
 	std::vector<std::string> data = splitString(str, separator);
+	std::vector<int> intData = stringVectorToInt(data);
+	return intData;
+}
+
+std::vector<int> splitToInt(std::string str) {
+	std::vector<std::string> data = splitString(str);
 	std::vector<int> intData = stringVectorToInt(data);
 	return intData;
 }
